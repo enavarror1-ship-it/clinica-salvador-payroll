@@ -33,10 +33,30 @@ Se ejecutaron las pruebas unitarias con:
 ```bash
 mvn test
 
+---
+
+## Evidencia de ejecución (CI)
+
+Este proyecto cuenta con integración continua configurada en GitHub Actions,  
+donde se ejecutan automáticamente las pruebas unitarias con Maven cada vez que se hace un push.
+
+![Build Status](docs/actions-run.png)
+
+Puedes ver la ejecución directamente aquí:  
+[Ver en GitHub Actions](https://github.com/enavarror1-ship-it/clinica-salvador-payroll/actions)
+
+---
+
+## Repositorio del proyecto
+
+Puedes acceder al código completo aquí:  
+[https://github.com/enavarror1-ship-it/clinica-salvador-payroll](https://github.com/enavarror1-ship-it/clinica-salvador-payroll)
+
+
 #Salida relevante de la ejecución
 [INFO] Results:
 [INFO]
-[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0
 [INFO]
 [INFO] BUILD SUCCESS
 
