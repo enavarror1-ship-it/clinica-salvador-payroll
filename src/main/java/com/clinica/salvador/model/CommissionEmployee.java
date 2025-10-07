@@ -69,9 +69,9 @@ public class CommissionEmployee extends Employee {
         BigDecimal gross = baseSalary.add(salesAmount.multiply(commissionPercent));
 
         // Si las ventas superan 20 millones, se da una bonificación del 3%
-        if(salesAmount.compareTo(new BigDecimal("20000000")) > 0) {
-            gross = gross.add(salesAmount.multiply(new BigDecimal("0.03")));
-        }
+        if (salesAmount.compareTo(BONUS_THRESHOLD) > 0) {
+        gross = gross.add(salesAmount.multiply(BONUS_PERCENT));
+    }
 
         // Si el empleado es permanente, se adiciona el auxilio de alimentación
         if(isPermanent()){
