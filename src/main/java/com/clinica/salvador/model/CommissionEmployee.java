@@ -1,7 +1,8 @@
 package com.clinica.salvador.model;
 
-import com.clinica.salvador.util.Config;
 import java.math.BigDecimal;
+
+import com.clinica.salvador.util.Config;
 
 /**
  * Clase CommissionEmployee
@@ -15,6 +16,11 @@ import java.math.BigDecimal;
  *   tipos de empleados sin modificar esta clase.
  */
 public class CommissionEmployee extends Employee {
+
+    // Constantes
+    private static final BigDecimal BONUS_THRESHOLD = new BigDecimal("20000000");
+    private static final BigDecimal BONUS_PERCENT = new BigDecimal("0.03");
+
 
     /** Salario base fijo del empleado */
     private BigDecimal baseSalary;
