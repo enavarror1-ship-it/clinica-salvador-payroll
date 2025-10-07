@@ -52,9 +52,9 @@ public class CommissionEmployee extends Employee {
 
     /**
      * Calcula el salario bruto del empleado (gross salary).
-     * La fórmula incluye:
+     * Esta fórmula incluye:
      * - Salario base
-     * - Comisiones sobre ventas
+     * - Comisiones sobre las ventas
      * - Bonificación adicional si supera 20,000,000 en ventas
      * - Auxilio de alimentación en caso de ser empleado permanente
      *
