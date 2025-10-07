@@ -1,6 +1,6 @@
 # Clínica Salvador(sistema de nomina) - Actividad de la Unidad 3 - Igenieria de Software
 
-Este repositorio contiene una implementación  para la actividad de la Unidad 3 de Ingeniería de Software: un sistema de cálculo de nómina y manejo de empleados, aplicando principios SOLID, código limpio, refactorización, pruebas unitarias y CI
+Este repositorio contiene una implementación  para la actividad de la Unidad 3 de Ingeniería de Software: un sistema de cálculo de nómina y manejo de empleados, aplicando principios SOLID, código limpio, refactorización, pruebas unitarias e Integracion continua (CI).
 
 ## Estructura
 - `src/main/java` - código fuente
@@ -27,8 +27,7 @@ Se ejecutaron las pruebas unitarias con:
 
 ```bash
 mvn test
-
----
+```
 
 ## Evidencia de ejecución (CI)
 
@@ -40,22 +39,21 @@ donde se ejecutan automáticamente las pruebas unitarias con Maven cada vez que 
 Puedes ver la ejecución directamente aquí:  
 [Ver en GitHub Actions](https://github.com/enavarror1-ship-it/clinica-salvador-payroll/actions)
 
----
 
 ## Repositorio del proyecto
 
 Puedes acceder al código completo aquí:  
 [https://github.com/enavarror1-ship-it/clinica-salvador-payroll](https://github.com/enavarror1-ship-it/clinica-salvador-payroll)
 
+## Salida relevante de la ejecución
 
-#Salida relevante de la ejecución
+```bash
 [INFO] Results:
 [INFO]
 [INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0
 [INFO]
 [INFO] BUILD SUCCESS
-
----
+```
 
 ## Metodología de Desarrollo
 
@@ -84,4 +82,3 @@ El trabajo se organizó por roles y entregas diarias, priorizando la colaboraci�
 - **GitHub Actions** — integración continua (CI).  
 - **VS Code** — entorno de desarrollo.
 
----
