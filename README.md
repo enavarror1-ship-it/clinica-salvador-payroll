@@ -6,11 +6,6 @@ Este repositorio contiene una implementación  para la actividad de la Unidad 3 
 - `src/main/java` - código fuente
 - `src/test/java` - pruebas unitarias (JUnit 5)
 - `.github/workflows/maven.yml` - Workflow de integración continua (CI) para ejecutar `mvn test` automáticamente
-## Requisitos
-- JDK 25
-- Maven 3.8+
-- Git (para control de versiones)  
-- Visual Studio Code para edición de código
 
 ## Cómo ejecutar tests
 ```bash
@@ -60,6 +55,33 @@ Puedes acceder al código completo aquí:
 [INFO]
 [INFO] BUILD SUCCESS
 
+---
 
+## Metodología de Desarrollo
 
+Para el desarrollo del proyecto **Clínica Salvador — Sistema de Nómina**, aplicamos una **metodología ágil tipo Scrum**, adaptada al entorno académico.  
+El trabajo se organizó por roles y entregas diarias, priorizando la colaboración, la calidad del código y el cumplimiento de los principios **SOLID**.
 
+### Roles del equipo
+- **Yeison Durán:** documentación, metodología y soporte conceptual.  
+- **Elizabeth Navarro & Kleymar Amador:** desarrollo del código fuente y refactorización.  
+- **Junior Fruto:** pruebas unitarias y verificación de cálculos.  
+- **CIPA Invictus:** integración continua y manejo del repositorio GitHub.  
+- **CIPA Invictus:** exposición del proyecto.
+
+### Fases del trabajo
+1. **Planificación:** definición de tipos de empleados, reglas de negocio y estructura POO.  
+2. **Desarrollo:** implementación de clases, aplicación de principios SOLID y buenas prácticas.  
+3. **Pruebas:** validación de cálculos mediante **JUnit 5**.  
+4. **Refactorización:** mejora del código, comentarios y documentación.  
+5. **Entrega:** control de versiones en **GitHub** y exposición en video CIPA.
+
+### Herramientas utilizadas
+- **Java (JDK 25)** — lenguaje principal.  
+- **Maven** — gestión de dependencias.  
+- **JUnit 5** — pruebas unitarias.  
+- **Git y GitHub** — control de versiones.  
+- **GitHub Actions** — integración continua (CI).  
+- **VS Code** — entorno de desarrollo.
+
+---
