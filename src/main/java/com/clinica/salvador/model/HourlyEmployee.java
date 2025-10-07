@@ -77,6 +77,8 @@ public class HourlyEmployee extends Employee {
         // Salario bruto = horas normales * tarifa + horas extra * tarifa * 1.5
         BigDecimal gross = baseHours.multiply(hourlyRate)
                 .add(overtimeHours.multiply(hourlyRate).multiply(new BigDecimal("1.5")));
+                
+        // Este empleado no recibe bonificaciones adicionales 
 
         return gross;
     }
