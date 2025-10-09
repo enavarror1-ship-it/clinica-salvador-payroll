@@ -1,16 +1,16 @@
 package com.clinica.salvador;
 
-import com.clinica.salvador.model.SalariedEmployee;
-import com.clinica.salvador.service.PayrollResult;
-import com.clinica.salvador.service.PayrollService;
-import com.clinica.salvador.util.Config;
-import org.junit.jupiter.api.Test;
-
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
+
+import com.clinica.salvador.model.SalariedEmployee;
+import com.clinica.salvador.service.PayrollResult;
+import com.clinica.salvador.service.PayrollService;
+import com.clinica.salvador.util.Config;
 
 /**
  * Pruebas unitarias para SalariedEmployee.
@@ -33,6 +33,12 @@ public class SalariedEmployeeTest {
 
         // Verificación: neto == bruto - deducciones (4%)
         BigDecimal expectedNet = r.getGross().subtract(r.getGross().multiply(Config.DEDUCTION_RATE));
+        System.out.println("Empleado Asalariado No permanente");
+        System.out.println("Salario fijo: $" + r.getGross());
+System.out.println("Salario bruto calculado: $" + r.getGross());
+System.out.println("Salario neto esperado: $" + expectedNet);
+System.out.println("Salario neto calculado: $" + r.getNet());
+
         assertEquals(0, expectedNet.compareTo(r.getNet()));
     }
 
@@ -54,6 +60,13 @@ public class SalariedEmployeeTest {
         // Verificación: neto == bruto - deducciones (4%)
         BigDecimal expectedNet = r.getGross().subtract(r.getGross().multiply(Config.DEDUCTION_RATE));
         assertEquals(0, expectedNet.compareTo(r.getNet()));
+System.out.println("Empleado Asalariado permanente");
+System.out.println("Salario fijo: $5.000.000");
+System.out.println("Bono de alimentación: $" + Config.FOOD_ALLOWANCE);
+System.out.println("Salario bruto esperado: $" + expectedGross);
+System.out.println("Salario bruto calculado: $" + r.getGross());
+System.out.println("Salario neto esperado: $" + expectedNet);
+System.out.println("Salario neto calculado: $" + r.getNet());
     }
 }
 
