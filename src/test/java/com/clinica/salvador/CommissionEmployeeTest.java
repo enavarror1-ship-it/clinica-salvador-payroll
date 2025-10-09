@@ -1,16 +1,16 @@
 package com.clinica.salvador;
 
-import com.clinica.salvador.model.CommissionEmployee;
-import com.clinica.salvador.service.PayrollResult;
-import com.clinica.salvador.service.PayrollService;
-import com.clinica.salvador.util.Config;
-import org.junit.jupiter.api.Test;
-
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
+
+import com.clinica.salvador.model.CommissionEmployee;
+import com.clinica.salvador.service.PayrollResult;
+import com.clinica.salvador.service.PayrollService;
+import com.clinica.salvador.util.Config;
 
 /**
  * Pruebas unitarias para CommissionEmployee.
@@ -36,6 +36,9 @@ public class CommissionEmployeeTest {
                 .add(new BigDecimal("30000000").multiply(new BigDecimal("0.10")))
                 .add(new BigDecimal("30000000").multiply(new BigDecimal("0.03")))
                 .add(Config.FOOD_ALLOWANCE);
+                
+                System.out.println("Salario bruto esperado: $" + gross);
+System.out.println("Salario bruto calculado por el sistema: $" + r.getGross());
 
         // Aserción: bruto calculado por el servicio debe coincidir con gross esperado
         assertEquals(0, gross.compareTo(r.getGross()));
