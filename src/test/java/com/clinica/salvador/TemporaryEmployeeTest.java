@@ -1,16 +1,17 @@
 package com.clinica.salvador;
 
-import com.clinica.salvador.model.TemporaryEmployee;
-import com.clinica.salvador.service.PayrollResult;
-import com.clinica.salvador.service.PayrollService;
-import com.clinica.salvador.util.Config;
-import org.junit.jupiter.api.Test;
-
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import org.junit.jupiter.api.Test;
+
+import com.clinica.salvador.model.TemporaryEmployee;
+import com.clinica.salvador.service.PayrollResult;
+import com.clinica.salvador.service.PayrollService;
+import com.clinica.salvador.util.Config;
 
 /**
  * Pruebas unitarias para la clase TemporaryEmployee.
@@ -47,6 +48,16 @@ public class TemporaryEmployeeTest {
         // Verificación 2: El salario neto debe ser bruto - deducciones (4% según Config)
         BigDecimal expectedNet = r.getGross().subtract(r.getGross().multiply(Config.DEDUCTION_RATE));
         assertEquals(0, expectedNet.compareTo(r.getNet()));
+        System.out.println("Empleado temporal: María Pérez");
+    System.out.println("Salario mensual fijo: $1.200.000");
+    System.out.println("Salario bruto calculado: $" + r.getGross());
+
+    System.out.println(); // Espacio visual
+
+    System.out.println("Deducción aplicada (4%): $" + r.getGross().multiply(Config.DEDUCTION_RATE));
+    System.out.println("Salario neto esperado: $" + expectedNet);
+    System.out.println("Salario neto calculado: $" + r.getNet());
+
     }
 
     @Test
