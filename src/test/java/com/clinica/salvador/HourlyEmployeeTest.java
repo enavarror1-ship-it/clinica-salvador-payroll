@@ -1,16 +1,16 @@
 package com.clinica.salvador;
 
-import com.clinica.salvador.model.HourlyEmployee;
-import com.clinica.salvador.service.PayrollResult;
-import com.clinica.salvador.service.PayrollService;
-import com.clinica.salvador.util.Config;
-import org.junit.jupiter.api.Test;
-
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
+
+import com.clinica.salvador.model.HourlyEmployee;
+import com.clinica.salvador.service.PayrollResult;
+import com.clinica.salvador.service.PayrollService;
+import com.clinica.salvador.util.Config;
 
 /**
  * Pruebas unitarias para HourlyEmployee.
@@ -40,5 +40,12 @@ public class HourlyEmployeeTest {
         BigDecimal expectedNet = expectedGross.subtract(expectedGross.multiply(Config.DEDUCTION_RATE));
         // Aserción: neto calculado debe coincidir con expectedNet
         assertEquals(0, expectedNet.compareTo(r.getNet()));
+
+        System.out.println("Horas normales: 40 × $20.000 = $" + base);
+System.out.println("Horas extra: 5 × $20.000 × 1.5 = $" + overtime);
+System.out.println("Salario bruto esperado: $" + expectedGross);
+System.out.println("Salario bruto calculado por el sistema: $" + r.getGross());
+System.out.println("Salario neto esperado: $" + expectedNet);
+System.out.println("Salario neto calculado por el sistema: $" + r.getNet());
     }
 }
